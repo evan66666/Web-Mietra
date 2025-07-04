@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
+                        <a class="nav-link active" href="index.html">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
@@ -48,7 +48,7 @@
                     </li>
                 </ul>
                 <div class="text-center mt-3 mt-lg-0">
-                    <a href="https://wa.me/082325630550" class="btn btn-brand">Hubungi Kami</a>
+                    <a href="https://wa.me/6282325630550" class="btn btn-brand">Hubungi Kami</a>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
                 <p class="my-4 lead">
                     Kami adalah produsen kardus karton yang berpengalaman dan terpercaya, siap menyediakan solusi kemasan yang tepat bagi produk Anda.
                 </p>
-                <a href="https://wa.me/082325630550" class="btn btn-brand">Hubungi Kami</a>
+                <a href="https://wa.me/6282325630550" class="btn btn-brand">Hubungi Kami</a>
             </div>
             <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                 <img src="assets/images/Home/hero.png" class="img-fluid" alt="Kemasan Produk dalam Kotak Karton">
@@ -114,7 +114,7 @@
                     <div class="col-lg-6" data-aos="fade-right">
                         <img src="assets/images/Home/pabrik.png" alt="Tentang Kami" class="img-fluid rounded-3 shadow">
                     </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in">
                         <h2 class="section-title">Siapa Kami?</h2>
                         <div class="section-divider ms-0"></div>
                         <p style="text-align: justify;" class="mt-4">Kami adalah perusahaan manufaktur karton box yang berdedikasi untuk menyediakan solusi packaging inovatif dan berkualitas tinggi. Dengan pengalaman bertahun-tahun, kami memahami pentingnya kemasan yang tidak hanya melindungi tetapi juga merepresentasikan citra brand Anda.</p>
@@ -282,21 +282,6 @@
                         <img src="assets/images/Home/Klien/klien10.png" alt="Client 10">
                         <img src="assets/images/Home/Klien/klien11.png" alt="Client 11">
                         <img src="assets/images/Home/Klien/klien12.png" alt="Client 12">
-
-                        <img src="assets/images/Home/Klien/1Klien.png" alt="Client 1">
-                        <img src="assets/images/Home/Klien/2klien.png" alt="Client 2">
-                        <img src="assets/images/Home/Klien/klien1.png" alt="Client 1">
-                        <img src="assets/images/Home/Klien/klien2.png" alt="Client 2">
-                        <img src="assets/images/Home/Klien/klien3.png" alt="Client 3">
-                        <img src="assets/images/Home/Klien/klien4.png" alt="Client 4">
-                        <img src="assets/images/Home/Klien/klien5.png" alt="Client 5">
-                        <img src="assets/images/Home/Klien/klien6.png" alt="Client 6">
-                        <img src="assets/images/Home/Klien/klien7.png" alt="Client 7">
-                        <img src="assets/images/Home/Klien/klien8.png" alt="Client 8">
-                        <img src="assets/images/Home/Klien/klien9.png" alt="Client 9">
-                        <img src="assets/images/Home/Klien/klien10.png" alt="Client 10">
-                        <img src="assets/images/Home/Klien/klien11.png" alt="Client 11">
-                        <img src="assets/images/Home/Klien/klien12.png" alt="Client 12">
                     </div>
                 </div>
                 
@@ -306,8 +291,8 @@
         <section id="kontak" class="section-padding cta-section">
             <div class="container text-center text-white">
                 <h2 class="fs-2 fw-bold" data-aos="fade-down">Diskusikan Kebutuhan Packaging Anda</h2>
-                <p class="my-4" data-aos="fade-down" data-aos-delay="200">Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda.</p>
-                <a href="https://wa.me/082325630550" target="_blank" class="btn btn-brand" data-aos="fade-up" data-aos-delay="300">
+                <p class="my-4 text-white-50" data-aos="fade-down" data-aos-delay="200">Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda.</p>
+                <a href="https://wa.me/6282325630550" target="_blank" class="btn btn-brand" data-aos="fade-up" data-aos-delay="300">
                     <span class="material-symbols-outlined me-2" style="vertical-align: middle;">call</span>
                     Hubungi Kami Sekarang
                 </a>
@@ -351,5 +336,24 @@
             once: true // Animasi hanya berjalan sekali
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const scroller = document.querySelector(".logo-scroller");
+        if (scroller) {
+            const scrollerInner = scroller.querySelector(".scroller-inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            // Duplikasi setiap item untuk looping yang smooth
+            scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            // Tambahkan aria-hidden untuk aksesibilitas, agar screen reader tidak membaca konten duplikat
+            duplicatedItem.setAttribute("aria-hidden", true); 
+            scrollerInner.appendChild(duplicatedItem);
+            });
+        }
+        });
+    </script>
+
 </body>
 </html>
