@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Link ke CSS kustom Anda -->
@@ -76,10 +77,10 @@
         <section id="contact-content" class="section-padding">
             <div class="container">
                 <!-- PERBAIKAN: Mengubah align-items-center menjadi align-items-stretch -->
-                <div class="row g-5 align-items-stretch">
+                <div class="row g-4 align-items-stretch">
                     
                      <!-- Kolom Kiri: Peta Lokasi -->
-                    <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
                         <div class="map-container shadow-sm">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700.5995324320693!2d110.69099084089551!3d-6.623375065824678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711f0fea14891b%3A0x3280a52bdc1e60a!2sCV.%20Mietra%20Wijaya%20box!5e0!3m2!1sid!2sid!4v1751392190197!5m2!1sid!2sid"
@@ -92,7 +93,7 @@
                     </div>
 
                     <!-- Kolom Kanan: Informasi Kontak -->
-                    <div class="col-lg-5" data-aos="zoom-in">
+                    <div class="col-lg-5" data-aos="fade-up">
                         <h2 class="fw-bold mb-4">Informasi Kantor</h2>
 
                         <div class="contact-info-item d-flex mb-4">
@@ -160,6 +161,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Tombol WhatsApp Melayang (Hanya untuk Mobile) -->
+    <a href="https://wa.me/6282325630550" 
+    class="whatsapp-float d-block d-md-none" 
+    target="_blank">
+    <i class="bi bi-whatsapp"></i>
+    </a>
 
     <!-- Script JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

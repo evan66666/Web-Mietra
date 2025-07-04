@@ -522,3 +522,59 @@ max-width: 1080px; /* Lebar container disesuaikan */
 .gallery-item:hover .gallery-item-overlay .material-symbols-outlined {
     transform: scale(1);
 }
+
+/* ======================================================= */
+/* Style Baru untuk Tombol WhatsApp Melayang (Mobile)    */
+/* ======================================================= */
+
+.whatsapp-float {
+    /* --- Posisi dan Ukuran --- */
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 15px;
+    z-index: 1000;
+
+    /* --- Tampilan Visual --- */
+    background: linear-gradient(135deg, #25D366, #128C7E); /* Gradient hijau yang lebih modern */
+    color: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25); /* Bayangan yang lebih halus */
+    
+    /* --- Ikon Sempurna di Tengah (Metode Baru) --- */
+    /* Menghapus flexbox dan menggunakan metode text-align */
+    text-align: center;
+    
+    /* --- Animasi --- */
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite; /* Animasi berdenyut */
+}
+
+/* Efek saat di-hover (untuk desktop jika suatu saat ingin ditampilkan) */
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.1); /* Sedikit terangkat dan membesar */
+    color: #FFF;
+    animation: none; /* Hentikan animasi denyut saat di-hover */
+}
+
+/* Mengatur ukuran dan posisi ikon agar pas */
+.whatsapp-float i {
+    font-size: 32px;
+    /* PERBAIKAN: Menengahkan ikon secara vertikal dengan line-height */
+    line-height: 60px; /* Nilai ini harus sama dengan height dari .whatsapp-float */
+}
+
+/* Keyframes untuk animasi berdenyut */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
