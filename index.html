@@ -1,365 +1,498 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mietra Wijaya Box</title>
-    <link rel="icon" href="assets/images/Home/icon.png" type="assets/images/Home/icon.png">
+    <link rel="icon" type="image/png" href="assets/images/home/Logo.png" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/Home/Logo.png" alt="Logo Perusahaan" style="height: 32px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav mx-auto text-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="produk.html">Produk</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galeri.html">Galeri</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kontak.html">Kontak</a>
-                    </li>
-                </ul>
-                <div class="text-center mt-3 mt-lg-0">
-                    <a href="https://wa.me/6282325630550" class="btn btn-brand">Hubungi Kami</a>
+</head>
+<body class="bg-white text-gray-800">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#f2f2f2] shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <a href="#">
+                        <img class="h-8 w-auto" src="assets/images/home/Logo.png" alt="Brand Logo">
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="index.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Home</a>
+                    <a href="about.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Tentang Kami</a>
+                    <a href="products.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Produk</a>
+                    <a href="contact.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Kontak</a>
+                </nav>
+
+                <div class="hidden md:block">
+                     <a href="https://wa.me/6282325630550" class="inline-block bg-identity-color text-white px-5 py-2.5 rounded-md font-normal hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:identity-color focus:outline-none">
+                        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
-    </nav>
 
-<section id="hero" class="section-padding">
-    <div class="container">
-        <div class="row align-items-center gy-5">
-            <div class="col-lg-6" data-aos="fade-right">
-                <h1 class="display-6 fw-bold">
-                    Solusi Tepat <span class="text-gold">untuk memenuhi kebutuhan kemasan produkmu</span>
-                </h1>
-                <p class="my-4 lead">
-                    Kami adalah produsen kardus karton yang berpengalaman dan terpercaya, siap menyediakan solusi kemasan yang tepat bagi produk Anda.
-                </p>
-                <a href="https://wa.me/6282325630550" class="btn btn-brand">Hubungi Kami</a>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-                <img src="assets/images/Home/hero.png" class="img-fluid" alt="Kemasan Produk dalam Kotak Karton">
+        <div id="mobile-menu" class="hidden md:hidden bg-[#f2f2f2] border-t border-gray-200">
+            <a href="index.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Tentang Kami</a>
+            <a href="products.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Produk</a>
+            <a href="contact.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Kontak</a>
+            <div class="p-4">
+                <a href="https://wa.me/6282325630550" class="w-full text-center bg-identity-color text-white px-5 py-2.5 rounded-md font-normal hover:bg-opacity-90 transition-all duration-300 block transform hover:scale-105">
+                    Hubungi Kami
+                </a>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
     <main>
-        <section id="produk" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center" data-aos="fade-down">
-                        <h2 class="section-title">Produk Kami</h2>
-                        <p class="lead" style="opacity: 0.8;">Kami melayani pembuatan box dengan bahan, bentuk, ukuran, hingga desain sablon sesuai dengan keinginan anda.</p>
-                        <div class="section-divider"></div>
-                    </div>
-                </div>
-                <div class="row g-4 mt-4">
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                        <div class="card card-product">
-                            <img src="assets/images/Home/produk1.png" class="card-img-top" alt="Produk 1">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card card-product">
-                            <img src="assets/images/Home/produk2.png" class="card-img-top" alt="Produk 2">
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card card-product">
-                            <img src="assets/images/Home/produk3.png" class="card-img-top" alt="Produk 3">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 text-center mt-5" data-aos="fade-up">
-                        <a href="produk.html" class="btn btn-brand">Lihat Selengkapnya</a>
-                    </div>
+        <section id="home" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+            <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
+                <source src="assets/videos/vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div class="relative z-20 px-4 sm:px-6 lg:px-8">
+                <h1 data-anim="hero-title" class="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight leading-tight mb-4">
+                    Solusi Kemasan Kardus <br class="hidden sm:block"> Terpercaya untuk Bisnis Anda
+                </h1>
+                <p data-anim="hero-p" class="max-w-2xl mx-auto mt-6 text-lg sm:text-xl text-gray-200">
+                    Kualitas, kustomisasi, dan ketepatan waktu. Kami menyediakan box karton terbaik untuk melindungi produk Anda.
+                </p>
+                <div data-anim="hero-btn" class="mt-10">
+                    <a href="products.html" class="inline-block bg-identity-color text-white px-8 py-4 rounded-md font-normal text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                        Lihat Produk Kami
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="tentang-kami" class="section-padding bg-light">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6" data-aos="fade-right">
-                        <img src="assets/images/Home/pabrik.png" alt="Tentang Kami" class="img-fluid rounded-3 shadow">
-                    </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in">
-                        <h2 class="section-title">Siapa Kami?</h2>
-                        <div class="section-divider ms-0"></div>
-                        <p style="text-align: justify;" class="mt-4">Kami adalah perusahaan manufaktur karton box yang berdedikasi untuk menyediakan solusi packaging inovatif dan berkualitas tinggi. Dengan pengalaman bertahun-tahun, kami memahami pentingnya kemasan yang tidak hanya melindungi tetapi juga merepresentasikan citra brand Anda.</p>
-                        <p style="text-align: justify;">Tim kami terdiri dari para ahli yang siap membantu Anda dari tahap konsultasi, desain, hingga produksi akhir.</p>
-                    </div>
+        <section id="products" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-left">
+                    <h2 data-anim="section-title" class="text-3xl sm:text-4xl font-semibold identity-color">Produk Kami</h2>
+                    <p data-anim="section-subtitle" class="mt-4 text-lg text-gray-600 max-w-3xl">Berbagai jenis dan ukuran karton box untuk segala kebutuhan bisnis Anda.</p>
                 </div>
-            </div>
-        </section>
-
-        <section id="layanan" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center" data-aos="fade-down">
-                        <h2 class="section-title">Layanan Kami</h2>
-                        <div class="section-divider"></div>
-                    </div>
-                </div>
-                <div class="row g-4 text-center mt-4">
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <div class="card-service">
-                            <div class="icon-wrapper">
-                                <span class="material-symbols-outlined">design_services</span>
-                            </div>
-                            <h5>Desain Kustom</h5>
-                            <p>Kami menyediakan layanan desain gratis untuk memastikan kemasan Anda unik dan fungsional.</p>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-w-4 aspect-h-3">
+                           <img class="w-full h-full object-cover" src="assets/images/home/produk1.png" alt="Karton Box Standar">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Karton Box Standar</h3>
+                            <p class="mt-2 text-gray-600">Ideal untuk pengiriman barang umum dan penyimpanan.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-service">
-                            <div class="icon-wrapper">
-                                <span class="material-symbols-outlined">local_shipping</span>
-                            </div>
-                            <h5>Pengiriman Cepat</h5>
-                            <p>Produksi efisien dan logistik andal kami menjamin pengiriman tepat waktu di Kudus, Jepara, dan sekitarnya.</p>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-w-4 aspect-h-3">
+                            <img class="w-full h-full object-cover" src="assets/images/home/produk2.png" alt="Die Cut Box">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Regular Slotted Box</h3>
+                            <p class="mt-2 text-gray-600">Kardus standar umum dengan empat flap penutup.</p>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-service">
-                            <div class="icon-wrapper">
-                                <span class="material-symbols-outlined">support_agent</span>
-                            </div>
-                            <h5>Konsultasi Ahli</h5>
-                            <p>Tim kami siap memberikan konsultasi untuk memilih bahan dan desain terbaik bagi produk Anda.</p>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-w-4 aspect-h-3">
+                           <img class="w-full h-full object-cover" src="assets/images/home/produk3.png" alt="Box Arsip">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Tuck-In Box</h3>
+                            <p class="mt-2 text-gray-600">Kotak rakitan mudah dengan tutup diselipkan praktis.</p>
+                        </div>
+                    </div>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-w-4 aspect-h-3">
+                           <img class="w-full h-full object-cover" src="assets/images/home/produk4.png" alt="Kardus Pizza">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Partition Box</h3>
+                            <p class="mt-2 text-gray-600"> Box partisi dengan sekat pemisah internal yang aman.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="kustomisasi" class="section-padding bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center" data-aos="fade-down">
-                        <h2 class="section-title">Apa saja yang bisa dikustomisasi?</h2>
-                        <p>Apapun kebutuhan Anda, kami bisa mewujudkannya.</p>
-                        <div class="section-divider"></div>
+        
+        <section id="services" class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 data-anim="section-title" class="text-3xl sm:text-4xl font-semibold identity-color">Layanan Profesional Kami</h2>
+                    <p data-anim="section-subtitle" class="mt-4 text-lg text-gray-600">Kami tidak hanya menjual produk, kami memberikan solusi kemasan yang lengkap.</p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div data-anim="service-card" class="p-6">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-blue-100 mx-auto">
+                            <span class="material-symbols-outlined identity-color text-5xl">design_services</span>
+                        </div>
+                        <h3 class="mt-6 font-semibold text-xl text-gray-900">Desain Kustom</h3>
+                        <p class="mt-2 text-gray-600">Wujudkan desain kemasan sesuai identitas brand Anda.</p>
+                    </div>
+                    <div data-anim="service-card" class="p-6">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-blue-100 mx-auto">
+                            <span class="material-symbols-outlined identity-color text-5xl">print</span>
+                        </div>
+                        <h3 class="mt-6 font-semibold text-xl text-gray-900">Cetak Logo & Merek</h3>
+                        <p class="mt-2 text-gray-600">Tingkatkan citra profesional dengan logo pada kemasan.</p>
+                    </div>
+                    <div data-anim="service-card" class="p-6">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-blue-100 mx-auto">
+                           <span class="material-symbols-outlined identity-color text-5xl">support_agent</span>
+                        </div>
+                        <h3 class="mt-6 font-semibold text-xl text-gray-900">Konsultasi Gratis</h3>
+                        <p class="mt-2 text-gray-600">Tim kami siap membantu memilih spesifikasi yang tepat.</p>
+                    </div>
+                    <div data-anim="service-card" class="p-6">
+                        <div class="flex items-center justify-center h-24 w-24 rounded-full bg-blue-100 mx-auto">
+                           <span class="material-symbols-outlined identity-color text-5xl">local_shipping</span>
+                        </div>
+                        <h3 class="mt-6 font-semibold text-xl text-gray-900">Pengiriman Cepat</h3>
+                        <p class="mt-2 text-gray-600">Produksi dan pengiriman tepat waktu, mencakup area Kudus, Jepara, dan sekitarnya</p>
                     </div>
                 </div>
-                <div class="row g-4 mt-4">
-                    <div class="col-lg-6 col-md-6" data-aos="zoom-in">
-                        <div class="custom-image-container">
-                            <img src="assets/images/Home/kustom1.png" alt="Bentuk Box" class="img-fluid rounded-3">
-                            <div class="image-label">Bentuk Box</div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div data-anim="about-img">
+                        <img src="assets/images/home/pabrik.jpg" alt="Mietra Wijaya Box" class="rounded-md shadow-lg w-full">
+                    </div>
+                    <div data-anim="about-text">
+                        <h2 class="text-3xl sm:text-4xl font-semibold identity-color">Lebih dari Sekedar Produsen Kardus</h2>
+                        <p class="mt-6 text-lg text-gray-600">
+                            Mietra Wijaya Box adalah produsen terkemuka dalam industri kemasan karton, menyediakan solusi kemasan berkualitas tinggi untuk bisnis Anda. Kami menghasilkan karton box yang kuat dan tahan lama, memberikan perlindungan optimal untuk produk Anda. Dengan berbagai pilihan desain yang dapat disesuaikan, ukuran, dan ketebalan. Komitmen kami terhadap kualitas dan kepuasan pelanggan membuat kami menjadi mitra terpercaya dalam setiap kebutuhan kemasan Anda.
+                        </p>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Kami bangga melayani area **Kudus, Jepara, dan sekitarnya**, memastikan kebutuhan kemasan Anda terpenuhi dengan cepat dan efisien.
+                        </p>
+                        <p class="mt-4 text-gray-600">
+                            Dengan teknologi modern dan tim yang berpengalaman, kami memastikan setiap kardus yang kami produksi memenuhi standar kualitas tertinggi.
+                        </p>
+                        <a href="contact.html" class="mt-8 inline-block font-semibold identity-color hover:text-blue-900 transition-transform duration-300 transform hover:translate-x-1">Pelajari Lebih Lanjut &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 data-anim="section-title" class="text-3xl sm:text-4xl font-semibold identity-color">Mengapa Kami adalah Pilihan Tepat?</h2>
+                    <p data-anim="section-subtitle" class="mt-4 text-lg text-gray-600">Kami memberikan nilai lebih yang membuat perbedaan bagi bisnis Anda.</p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">verified</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Bahan Baku Berkualitas</h3>
+                        <p class="mt-2 text-gray-600">Kami hanya menggunakan material kertas kraft terbaik yang kuat dan tahan lama.</p>
+                    </div>
+                    <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">bolt</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Proses Cepat & Efisien</h3>
+                        <p class="mt-2 text-gray-600">Sistem produksi kami terintegrasi untuk memenuhi pesanan Anda tepat waktu.</p>
+                    </div>
+                    <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">price_check</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Harga Kompetitif</h3>
+                        <p class="mt-2 text-gray-600">Dapatkan kualitas premium dengan penawaran harga terbaik di pasar.</p>
+                    </div>
+                     <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">groups</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Pelayanan Responsif</h3>
+                        <p class="mt-2 text-gray-600">Tim kami siap membantu Anda dari konsultasi hingga purna jual dengan sigap.</p>
+                    </div>
+                    <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">production_quantity_limits</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Minimum Order Fleksibel</h3>
+                        <p class="mt-2 text-gray-600">Sesuaikan jumlah pesanan dengan kebutuhan bisnis Anda, tanpa minimum yang memberatkan.</p>
+                    </div>
+                    <div data-anim="card" class="text-center p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mx-auto mb-5">
+                            <span class="material-symbols-outlined identity-color text-4xl">payments</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Termin Pembayaran Mudah</h3>
+                        <p class="mt-2 text-gray-600">Kami menyediakan opsi pembayaran yang fleksibel untuk kelancaran bisnis Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="customization" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-left">
+                    <h2 data-anim="section-title" class="text-3xl sm:text-4xl font-semibold identity-color">Kustomisasi Tanpa Batas</h2>
+                    <p data-anim="section-subtitle" class="mt-4 text-lg text-gray-600 max-w-3xl">Sesuaikan setiap detail kemasan untuk cerminan sempurna produk Anda.</p>
+                </div>
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-[4/3]">
+                           <img class="w-full h-full object-cover" src="assets/images/home/kustom3.png" alt="Kustomisasi Ukuran">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Ukuran & Dimensi</h3>
+                            <p class="mt-2 text-gray-600">Dari kecil hingga besar, kami buat ukuran yang pas untuk produk Anda.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="custom-image-container">
-                            <img src="assets/images/Home/kustom2.png" alt="Bahan Box" class="img-fluid rounded-3">
-                            <div class="image-label">Bahan Box</div>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-[4/3]">
+                           <img class="w-full h-full object-cover" src="assets/images/home/kustom2.png" alt="Kustomisasi Material">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Tipe Material</h3>
+                            <p class="mt-2 text-gray-600">Pilih ketebalan dan jenis flute (single/double wall) sesuai kebutuhan.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="custom-image-container">
-                            <img src="assets/images/Home/kustom3.png" alt="Ukuran Box" class="img-fluid rounded-3">
-                            <div class="image-label">Ukuran Box</div>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-[4/3]">
+                           <img class="w-full h-full object-cover" src="assets/images/home/kustom4.png" alt="Kustomisasi Cetak">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Desain Sablon</h3>
+                            <p class="mt-2 text-gray-600">Cetak desain logo sesuai keinginanmu.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="custom-image-container">
-                            <img src="assets/images/Home/kustom4.png" alt="Desain Sablon" class="img-fluid rounded-3">
-                            <div class="image-label">Desain Sablon</div>
+                    <div data-anim="card" class="bg-white rounded-md shadow-md overflow-hidden">
+                        <div class="aspect-[4/3]">
+                           <img class="w-full h-full object-cover" src="assets/images/home/kustom1.png" alt="Kustomisasi Model Box">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-semibold text-md text-gray-900">Model Box</h3>
+                            <p class="mt-2 text-gray-600">Pilih dari model standar, die cut, hingga desain khusus lainnya.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="mengapa-kami" class="section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center" data-aos="fade-down">
-                        <h2 class="section-title">Mengapa Memilih Kami?</h2>
-                        <div class="section-divider"></div>
+        <section id="inspiration" class="py-20 sm:py-28 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-left">
+                    <h2 data-anim="section-title" class="text-3xl sm:text-4xl font-semibold identity-color">Inspirasi Penggunaan</h2>
+                    <p data-anim="section-subtitle" class="mt-4 text-lg text-gray-600 max-w-3xl">Lihat bagaimana klien kami menggunakan produk untuk berbagai kebutuhan.</p>
+                </div>
+            </div>
+            <div class="mt-12 relative">
+                <div class="swiper inspiration-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi1.png" alt="Inspirasi Hampers" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Hampers</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi2.jpeg" alt="Inspirasi Furniture" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Furnitur</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi3.png" alt="Inspirasi Elektronik" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Elektronik</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi4.jpg" alt="Inspirasi Produk" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Produk Makanan</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi5.jpg" alt="Inspirasi Pakaian" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Produk Pakaian</p>
+                        </div>
+                           <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi6.png" alt="Inspirasi E-Commerce" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Pengiriman Online</p>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi1.png" alt="Inspirasi Hampers" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Hampers</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi2.jpeg" alt="Inspirasi Furniture" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Furnitur</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi3.png" alt="Inspirasi Elektronik" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Elektronik</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi4.jpg" alt="Inspirasi Produk" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Produk Makanan</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi5.jpg" alt="Inspirasi Pakaian" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Produk Pakaian</p>
+                        </div>
+                           <div class="swiper-slide">
+                            <img src="assets/images/home/inspirasi6.png" alt="Inspirasi E-Commerce" class="h-[405px] w-full object-cover rounded-md shadow-lg">
+                            <p class="mt-2 text-left font-normal text-lg text-gray-700">Pengiriman Online</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row g-4 mt-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                        <div class="card-feature">
-                            <span class="material-symbols-outlined icon">verified</span>
-                            <h5 class="mt-3">Bahan Berkualitas</h5>
-                            <p>Kami hanya menggunakan material pilihan terbaik.</p>
-                        </div>
+                 <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section id="logo-slider" class="py-10 sm:py-16 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl sm:text-3xl font-semibold identity-color">Dipercaya oleh Berbagai Industri</h2>
+                    <p class="mt-2 text-md text-gray-600">Kami bangga menjadi bagian dari kesuksesan klien kami.</p>
+                </div>
+            </div>
+
+            <div class="py-12 swiper logo-carousel">
+                <div class="swiper-wrapper items-center">
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/1Klien.png" alt="Logo Klien 1" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-feature">
-                            <span class="material-symbols-outlined icon">price_check</span>
-                            <h5 class="mt-3">Harga Kompetitif</h5>
-                            <p>Kualitas premium dengan harga yang bersahabat.</p>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/2klien.png" alt="Logo Klien 2" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-feature">
-                            <span class="material-symbols-outlined icon">recycling</span>
-                            <h5 class="mt-3">Ramah Lingkungan</h5>
-                            <p>Produk kami dapat didaur ulang dan ramah lingkungan.</p>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien1.png" alt="Logo Klien 3" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-feature">
-                            <span class="material-symbols-outlined icon">timer</span>
-                            <h5 class="mt-3">Produksi Tepat Waktu</h5>
-                            <p>Kami menghargai waktu Anda dengan proses yang efisien.</p>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien2.png" alt="Logo Klien 4" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                         <div class="card-feature">
-                            <span class="material-symbols-outlined icon">palette</span>
-                            <h5 class="mt-3">Opsi Kustom Lengkap</h5>
-                            <p>Ukuran, bentuk, dan cetak dapat disesuaikan sepenuhnya.</p>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien3.png" alt="Logo Klien 5" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card-feature">
-                            <span class="material-symbols-outlined icon">thumb_up</span>
-                            <h5 class="mt-3">Garansi Kepuasan</h5>
-                            <p>Kepuasan pelanggan adalah prioritas utama kami.</p>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien4.png" alt="Logo Klien 6" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien5.png" alt="Logo Klien 7" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien6.png" alt="Logo Klien 8" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien7.png" alt="Logo Klien 9" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien8.png" alt="Logo Klien 10" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien9.png" alt="Logo Klien 11" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien10.png" alt="Logo Klien 12" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien11.png" alt="Logo Klien 13" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/home/Klien/klien12.png" alt="Logo Klien 14" class="h-16 object-contain mx-auto opacity-75 hover:opacity-100 transition-opacity duration-300">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="pelanggan" class="section-padding bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center" data-aos="fade-down">
-                        <h2 class="section-title">Dipercaya Oleh</h2>
-                        <div class="section-divider"></div>
+        <section id="contact-us" class="relative bg-cover bg-center" style="background-image: url('assets/images/home/cta.jpg')">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+                <div data-anim="cta-content">
+                    <h2 class="text-3xl sm:text-4xl font-normal text-white">Siap Meningkatkan Kualitas Kemasan Anda?</h2>
+                    <p class="mt-4 text-lg text-opacity-60 max-w-2xl text-white mx-auto">
+                        Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda.
+                    </p>
+                    <div class="mt-8">
+                        <a href="https://wa.me/6282325630550" target="_blank" class="inline-block bg-white identity-color px-8 py-4 rounded-md font-normal text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                            Hubungi Kami Sekarang
+                        </a>
                     </div>
                 </div>
-
-                <div class="logo-scroller" data-aos="fade-up">
-                    <div class="scroller-inner">
-                        <img src="assets/images/Home/Klien/1Klien.png" alt="Client 1">
-                        <img src="assets/images/Home/Klien/2klien.png" alt="Client 2">
-                        <img src="assets/images/Home/Klien/klien1.png" alt="Client 1">
-                        <img src="assets/images/Home/Klien/klien2.png" alt="Client 2">
-                        <img src="assets/images/Home/Klien/klien3.png" alt="Client 3">
-                        <img src="assets/images/Home/Klien/klien4.png" alt="Client 4">
-                        <img src="assets/images/Home/Klien/klien5.png" alt="Client 5">
-                        <img src="assets/images/Home/Klien/klien6.png" alt="Client 6">
-                        <img src="assets/images/Home/Klien/klien7.png" alt="Client 7">
-                        <img src="assets/images/Home/Klien/klien8.png" alt="Client 8">
-                        <img src="assets/images/Home/Klien/klien9.png" alt="Client 9">
-                        <img src="assets/images/Home/Klien/klien10.png" alt="Client 10">
-                        <img src="assets/images/Home/Klien/klien11.png" alt="Client 11">
-                        <img src="assets/images/Home/Klien/klien12.png" alt="Client 12">
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="kontak" class="section-padding cta-section">
-            <div class="container text-center text-white">
-                <h2 class="fs-2 fw-bold" data-aos="fade-down">Diskusikan Kebutuhan Packaging Anda</h2>
-                <p class="my-4 text-white-50" data-aos="fade-down" data-aos-delay="200">Jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda.</p>
-                <a href="https://wa.me/6282325630550" target="_blank" class="btn btn-brand" data-aos="fade-up" data-aos-delay="300">
-                    <span class="material-symbols-outlined me-2" style="vertical-align: middle;">call</span>
-                    Hubungi Kami Sekarang
-                </a>
             </div>
         </section>
     </main>
 
-    <footer class="footer-bg">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-3 col-md-12 text-center text-lg-start mb-4 mb-lg-0">
-                     <a href="#">
-                        <img src="assets/images/Home/Logo.png" alt="Logo Perusahaan" style="height: 36px;">
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col lg:flex-row justify-between gap-10">
+                <div class="lg:w-1/3">
+                    <a href="#">
+                        <img class="h-8 w-auto footer-logo-white" src="assets/images/home/Logo.png" alt="Brand Logo">
+                    </a>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        Penyedia solusi kemasan kardus terdepan yang mengutamakan kualitas, inovasi, dan kepuasan pelanggan.
+                    </p>
+                <div class="mt-4 max-w-md">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-125">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" fill="none"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                        </svg>
                     </a>
                 </div>
-                <div class="col-lg-6 col-md-12 text-center mb-4 mb-lg-0 small">
-                    <p class="mb-1"><strong>Alamat:</strong> Jalan Grejensari RT. 004 RW. 004 Tahunan, Jepara</p>
-                    <p class="mb-1"><strong>Jam Operasional:</strong> Senin - Jumat (08:00 - 16:00)</p>
-                    <p class="mb-0"><strong>Hubungi Kami:</strong> 0823-2563-0550 | mietrabox@gmail.com</p>
                 </div>
-                <div class="col-lg-3 col-md-12 text-center text-lg-end">
-                    <a href="https://www.instagram.com/mietrawijayabox/" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.703.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.231 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.884a1.15 1.15 0 1 0 0 2.3 1.15 1.15 0 0 0 0-2.3zM8 4.632A3.368 3.368 0 1 0 8 11.367a3.368 3.368 0 0 0 0-6.735zM8 9.87a1.87 1.87 0 1 1 0-3.74 1.87 1.87 0 0 1 0 3.74z"/></svg></a>
+                
+                <div class="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold tracking-wider uppercase font-heading">Kontak</h4>
+                        <ul class="mt-4 space-y-3 text-gray-400">
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">mail</span><a href="mailto:mietrabox@gmail.com" class="hover:text-white">mietrabox@gmail.com</a></li>
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">call</span><a href="tel:+6282325630550" class="hover:text-white">0823-2563-0550</a></li>
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">location_on</span><span>Jalan Grejensari RT. 004 RW. 004 Tahunan, Jepara</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold tracking-wider uppercase font-heading">Jam Kerja</h4>
+                         <ul class="mt-4 space-y-3 text-gray-400">
+                            <li class="flex items-start"><span>Senin - Jumat: 08:00 - 17:00</span></li>
+                            <li class="flex items-start"><span>Sabtu: 08:00 - 13:00</span></li>
+                            <li class="flex items-start"><span>Minggu dan Hari Libur: Tutup</span></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-             <div class="row">
-                <div class="col-12 text-center pt-4">
-                    <p class="text-white-50 small mb-0">&copy; 2025 Mietra Wijaya Box. Semua Hak Cipta Dilindungi.</p>
-                </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row items-center justify-between">
+                <p class="text-sm text-gray-500">&copy; 2025 Mietra Wijaya Box. Semua Hak Cipta Dilindungi.</p>
+                
             </div>
         </div>
     </footer>
-
     <!-- Tombol WhatsApp Melayang (Hanya untuk Mobile) -->
-    <a href="https://wa.me/6282325630550" 
-    class="whatsapp-float d-block d-md-none" 
+    <a href="https://wa.me/6282325630550"
+    class="whatsapp-float d-block d-md-none"
     target="_blank">
-    <i class="bi bi-whatsapp"></i>
-    </a>
+        <i class="material-symbols-outlined">forum</i> </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        AOS.init({
-            duration: 800, // Durasi animasi
-            once: true // Animasi hanya berjalan sekali
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        const scroller = document.querySelector(".logo-scroller");
-        if (scroller) {
-            const scrollerInner = scroller.querySelector(".scroller-inner");
-            const scrollerContent = Array.from(scrollerInner.children);
-
-            // Duplikasi setiap item untuk looping yang smooth
-            scrollerContent.forEach(item => {
-            const duplicatedItem = item.cloneNode(true);
-            // Tambahkan aria-hidden untuk aksesibilitas, agar screen reader tidak membaca konten duplikat
-            duplicatedItem.setAttribute("aria-hidden", true); 
-            scrollerInner.appendChild(duplicatedItem);
-            });
-        }
-        });
-    </script>
-
+    <script src="js/main.js"></script>
 </body>
 </html>

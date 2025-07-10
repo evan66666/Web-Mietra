@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mietra Wijaya Box</title>
+    <link rel="icon" type="image/png" href="assets/images/home/Logo.png" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ===== Bagian Header dan Navbar (Konsisten dengan Halaman Utama) ===== -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#f2f2f2] shadow-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html"> <!-- Link ke halaman utama -->
+                        <img class="h-8 w-auto" src="assets/images/home/Logo.png" alt="Brand Logo">
+                    </a>
+                </div>
+
+                <!-- Navigasi Desktop -->
+                <nav class="hidden md:flex items-center space-x-10">
+                    <a href="index.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Home</a>
+                    <a href="about.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Tentang Kami</a>
+                    <a href="products.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Produk</a>
+                    <a href="contact.html" class="font-medium text-gray-600 hover:identity-color transition-all duration-300 nav-link transform hover:-translate-y-0.5">Kontak</a>
+                </nav>
+
+                <!-- Tombol Hubungi Kami (Desktop) -->
+                <div class="hidden md:block">
+                     <a href="https://wa.me/6282325630550" target="_blank" class="inline-block bg-identity-color text-white px-5 py-2.5 rounded-md font-normal hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">
+                        Hubungi Kami
+                    </a>
+                </div>
+
+                <!-- Tombol Menu Mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:identity-color focus:outline-none">
+                        <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (disembunyikan secara default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#f2f2f2] border-t border-gray-200">
+            <a href="index.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Home</a>
+            <a href="about.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Tentang Kami</a>
+            <a href="products.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Produk</a>
+            <a href="contact.html" class="block py-3 px-4 text-sm text-gray-600 hover:bg-gray-50 hover:identity-color">Kontak</a>
+            <div class="p-4">
+                <a href="https://wa.me/6282325630550" class="w-full text-center bg-identity-color text-white px-5 py-2.5 rounded-md font-normal hover:bg-opacity-90 transition-all duration-300 block transform hover:scale-105">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Tambahkan padding-top agar konten tidak tertutup navbar fixed -->
+
+        <!-- ===== Bagian Hero Halaman Kontak ===== -->
+        <section id="contact-hero" class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-center text-white" 
+                 style="background-image: url('assets/images/contact/hero.jpg');">
+            <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+            <div class="relative z-20 px-4 sm:px-6 lg:px-8">
+                <h1 data-anim="contact-hero-title" class="text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight leading-tight mb-4">
+                    Kami Siap Membantu Anda
+                </h1>
+                <p data-anim="contact-hero-subtitle" class="max-w-2xl mx-auto mt-6 text-lg sm:text-xl text-gray-200">
+                    Tim kami selalu tersedia untuk menjawab pertanyaan dan memberikan solusi terbaik.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== Bagian Informasi Kontak dan Google Maps ===== -->
+        <section id="contact-info-section" class="py-20 sm:py-28 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Informasi Kontak -->
+                    <div data-anim="contact-info-card" class="bg-white p-8 rounded-md shadow-lg space-y-6">
+                        <h3 class="font-semibold text-2xl identity-color mb-4">Informasi Kontak Kami</h3>
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined identity-color text-3xl mr-4 mt-1">location_on</span>
+                            <div>
+                                <h4 class="font-medium text-lg text-gray-900">Alamat Kantor</h4>
+                                <p class="text-gray-700">Jalan Grejensari RT. 004 RW. 004 Tahunan, Jepara</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined identity-color text-3xl mr-4 mt-1">call</span>
+                            <div>
+                                <h4 class="font-medium text-lg text-gray-900">Telepon</h4>
+                                <p class="text-gray-700"><a href="tel:+6282325630550" class="hover:underline">0823-2563-0550</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined identity-color text-3xl mr-4 mt-1">mail</span>
+                            <div>
+                                <h4 class="font-medium text-lg text-gray-900">Email</h4>
+                                <p class="text-gray-700"><a href="mailto:mietrabox@gmail.com" class="hover:underline">mietrabox@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="material-symbols-outlined identity-color text-3xl mr-4 mt-1">schedule</span>
+                            <div>
+                                <h4 class="font-medium text-lg text-gray-900">Jam Kerja</h4>
+                                <p class="text-gray-700">Senin - Jumat: 08:00 - 17:00</p>
+                                <p class="text-gray-700">Sabtu: 08:00 - 13:00</p>
+                                <p class="text-gray-700">Minggu dan Hari Libur: Tutup</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps -->
+                    <div>
+                        <div class="text-center mb-6"> <!-- NEW: Kontainer untuk judul peta -->
+                            <h3 data-anim="section-title" class="text-2xl sm:text-2xl font-semibold identity-color">Temukan Lokasi Kami</h3>
+                        </div>
+                        <div id="location-map" data-anim="map-embed" class="relative w-full h-96 rounded-md shadow-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.189189753282!2d110.6907753!3d-6.6234065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711f0fea14891b%3A0x3280a52bdc1e60a!2sCV.%20Mietra%20Wijaya%20box!5e0!3m2!1sen!2sid!4v1752108913760!5m2!1sen!2sid" 
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <!-- Tombol Lihat Peta Lebih Besar -->
+                            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.189189753282!2d110.6907753!3d-6.6234065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711f0fea14891b%3A0x3280a52bdc1e60a!2sCV.%20Mietra%20Wijaya%20box!5e0!3m2!1sen!2sid!4v1752108913760!5m2!1sen!2sid" 
+                               target="_blank" 
+                               class="map-button-overlay bg-identity-color text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition-all duration-300">
+                               Lihat Peta Lebih Besar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- ===== Bagian Footer (Konsisten dengan Halaman Utama) ===== -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col lg:flex-row justify-between gap-10">
+                <!-- Kolom 1: Tentang Perusahaan -->
+                <div class="lg:w-1/3">
+                    <a href="index.html">
+                        <img class="h-8 w-auto footer-logo-white" src="assets/images/home/Logo.png" alt="Brand Logo">
+                    </a>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        Penyedia solusi kemasan kardus terdepan yang mengutamakan kualitas, inovasi, dan kepuasan pelanggan.
+                    </p>
+                <div class="mt-4 max-w-md">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-125">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2" fill="none"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2" fill="none"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                        </svg>
+                    </a>
+                </div>
+                </div>
+                
+                <!-- Kolom 2 & 3: Kontak dan Jam Kerja -->
+                <div class="flex-grow grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold tracking-wider uppercase font-heading">Kontak</h4>
+                        <ul class="mt-4 space-y-3 text-gray-400">
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">mail</span><a href="mailto:mietrabox@gmail.com" class="hover:text-white">mietrabox@gmail.com</a></li>
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">call</span><a href="tel:+6282325630550" class="hover:text-white">0823-2563-0550</a></li>
+                            <li class="flex items-start"><span class="material-symbols-outlined mr-3 text-lg">location_on</span><span>Jalan Grejensari RT. 004 RW. 004 Tahunan, Jepara</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold tracking-wider uppercase font-heading">Jam Kerja</h4>
+                         <ul class="mt-4 space-y-3 text-gray-400">
+                            <li class="flex items-start"><span>Senin - Jumat: 08:00 - 17:00</span></li>
+                            <li class="flex items-start"><span>Sabtu: 08:00 - 13:00</span></li>
+                            <li class="flex items-start"><span>Minggu dan Hari Libur: Tutup</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row items-center justify-between">
+                <p class="text-sm text-gray-500">&copy; 2025 Mietra Wijaya Box. Semua Hak Cipta Dilindungi.</p>
+                
+            </div>
+        </div>
+    </footer>
+    <!-- Tombol WhatsApp Melayang (Hanya untuk Mobile) -->
+    <a href="https://wa.me/6282325630550"
+    class="whatsapp-float d-block d-md-none"
+    target="_blank">
+        <i class="material-symbols-outlined">forum</i> </a>
+
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP Core dan ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
