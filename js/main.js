@@ -329,34 +329,6 @@ document.addEventListener('DOMContentLoaded', () => {
         stagger: 0.2,
     });
 
-    // NEW: Logika untuk menandai tautan navigasi aktif
-    function setActiveNavLink() {
-        const currentPath = window.location.pathname.split('/').pop(); // Mendapatkan nama file HTML saat ini
-        const navLinks = document.querySelectorAll('.nav-link'); // Semua tautan navigasi
-
-        navLinks.forEach(link => {
-            // Hapus kelas 'active' dari semua tautan terlebih dahulu
-            link.classList.remove('active');
-
-            // Dapatkan nama file dari href tautan
-            const linkPath = link.getAttribute('href').split('/').pop().split('#')[0]; // Menghapus #id jika ada
-
-            // Logika untuk menandai tautan aktif
-            if (currentPath === linkPath) {
-                link.classList.add('active');
-            } else if (currentPath === '' && linkPath === 'index.html') { // Kasus khusus untuk halaman utama jika diakses tanpa index.html
-                link.classList.add('active');
-            }
-        });
-    }
-
-    // Panggil fungsi saat DOM dimuat
-    setActiveNavLink();
-
-    // Opsional: Panggil juga saat hash berubah (untuk navigasi dalam satu halaman)
-    window.addEventListener('hashchange', setActiveNavLink);
-
-
     // ===== Products Page Logic (Filtering & Pagination) =====
     const productGrid = document.getElementById('product-grid');
     const filterButtons = document.querySelectorAll('.filter-btn'); 
